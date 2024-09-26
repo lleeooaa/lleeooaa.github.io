@@ -189,26 +189,6 @@ h2 {
     font-weight: 400;
 }
 
-.project-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.project-list li {
-    margin-bottom: 1rem;
-}
-
-.project-list a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.project-list a:hover {
-    color: var(--secondary-color);
-}
-
 footer {
     text-align: center;
     background: var(--header-gradient);

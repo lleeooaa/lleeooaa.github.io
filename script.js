@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
     const jokesContainer = document.getElementById('jokes-container');
-    const projectList = document.getElementById('projectList');
 
     const jokes = [
         {
@@ -108,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const hash = window.location.hash.substring(1) || 'home';
         showContent(hash);
         setActiveLink(document.querySelector(`a[href="#${hash}"]`));
-        if (hash === 'projects') displayProjects();
     }
 
     window.addEventListener('hashchange', handleHashChange);
@@ -144,25 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             jokesContainer.appendChild(jokeCard);
-        });
-    }
-
-    const projects = [
-        { name: "Sudoku", url: "https://lleeooaa.github.io/Sudoku_web" },
-        //{ name: "Project 2", url: "https://github.com/yourusername/project2" },
-        //{ name: "Project 3", url: "https://github.com/yourusername/project3" },
-    ];
-
-    function displayProjects() {
-        projectList.innerHTML = '';
-        projects.forEach(project => {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.href = project.url;
-            a.textContent = project.name;
-            a.target = "_blank";
-            li.appendChild(a);
-            projectList.appendChild(li);
         });
     }
 
